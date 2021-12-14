@@ -1,0 +1,32 @@
+# Cloud automation with ansible
+- Aws cloud management team
+- Deploy /Setup infra on cloud
+- Usage of secure & HA VPC for new projects
+- Regular requests
+- Vpc contains many moving parts
+- Subnets,NAT,INT GW,Route tables,NACL,Security Group
+- Bastion Host
+-  Ansible config --> Playbook --> vars --> modules --> boto -->
+- vpc have subnets in 2 zones
+- we have both private and public subnets in the both the zones
+- Basition host server
+--------------------------------------------------------------------------
+- Install ansible,boto
+- ec2 role for boto
+- create a project directory
+- sample cloud tasks
+- create variables for bastion & VPC
+- create vpc and bastion playbook
+- site.yml call both at once
+------------------------------------------------------------------------------------------------------
+77_b) Ansible_setup
+-- install ansible on ubuntu
+$ sudo apt-get update
+$ sudo apt install ansible -y
+-- create a role for the admin access in ec2 instance
+- attach to the ec2 instance
+-  curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+- python3 get-pip.py
+-  sudo vi ~/.profile
+    export PATH="$HOME/.local/bin:$PATH"
+$ sudo aws sts get-caller-identity
